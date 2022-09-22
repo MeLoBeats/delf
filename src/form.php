@@ -75,7 +75,7 @@ if (
             }
         } catch (\Throwable $th) {
             $_SESSION['errForm'] = "Désolé. Une erreur est survenue. Veuillez réessayer.";
-            header('location: ../public/form.php');
+            // header('location: ../public/form.php');
             die;
         }
     }
