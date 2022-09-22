@@ -103,6 +103,7 @@ isset($donnees) && !empty($donnees)
         }
         if($file['error'] > 0) {
             echo "Une erreur est survenue lors du transfert";
+            var_dump($error_messages[$file['error']]);
             $_SESSION['errForm'] = "Désolé. Une erreur est survenue lors du transfert de votre carte d'identité. Veuillez réessayer.";
             header('location: ../public/form.php');
             die;
@@ -191,5 +192,3 @@ isset($donnees) && !empty($donnees)
     $_SESSION['errForm'] = "Veuillez remplir tout les champs";
     header("location: ../public/form.php");
 }
-
-?>
